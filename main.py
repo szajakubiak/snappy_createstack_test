@@ -11,7 +11,7 @@ import esa_snappy
 import glob
 
 
-DATA_PATH = "data"
+DATA_PATH = "data_mix_3"
 REFERENCE_DATE = "20190429"
 OUTPUT_FILE_NAME = "stack_file_script.dim"
 
