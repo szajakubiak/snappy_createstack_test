@@ -19,13 +19,13 @@ OUTPUT_FILE_NAME = "stack_file_script.dim"
 files = glob.glob(DATA_PATH + "\*.dim")
 files.sort()
 # Put reference file as the last one in list
-files_reoredered = [ref for ref in files if REFERENCE_DATE not in ref] + [ref for ref in files if REFERENCE_DATE in ref]
+files_reordered = [file for file in files if REFERENCE_DATE not in file] + [ref for ref in files if REFERENCE_DATE in ref]
 # Append working directory to file path to match SNAP Desktop behaviour
-files_reoredered = [os.path.join(os.getcwd(), file) for file in files_reoredered]
+files_reordered = [os.path.join(os.getcwd(), file) for file in files_reordered]
 
 products = []
 print("Files order:")
-for file in files_reoredered:
+for file in files_reordered:
     parameters = esa_snappy.HashMap()
     parameters.put("useAdvancedOptions", "false")
     parameters.put("file", file)
