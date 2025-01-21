@@ -31,7 +31,7 @@ for file in files_reordered:
     parameters.put("file", file)
     parameters.put("formatName", "BEAM-DIMAP")
     parameters.put("copyMetadata", "true")
-    file_data = esa_snappy.GPF.createProduct("Read", parameters, products)
+    file_data = esa_snappy.GPF.createProduct("Read", parameters)
     products.append(file_data)
     print(f"{products[-1].getName()}")
 
